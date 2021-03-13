@@ -1,9 +1,15 @@
 
 #include "Nodo.h"
 
-Nodo::Nodo(int n):_dato(n),_der(nullptr),_izq(nullptr),_raiz(nullptr)
+Nodo::Nodo(int n):_dato(n),_der(nullptr),_izq(nullptr)
 {
 
+}
+
+Nodo::~Nodo()
+{
+	delete _izq;
+	delete _der;
 }
 
 void Nodo::insertarNodo(int dato)

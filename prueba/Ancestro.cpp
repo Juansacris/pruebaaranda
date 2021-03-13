@@ -7,12 +7,19 @@ Ancestro::Ancestro(Nodo* arbol): _arbol(arbol)
 
 }
 
-int Ancestro::encontrarAncestro(int a, int b)
+std::optional<int> Ancestro::encontrarAncestro(int a, int b)
 {
 	std::vector<int> camino1, camino2;
 	if (!encontrarCamino(_arbol, camino1, a) || !encontrarCamino(_arbol, camino2, b)) {
-		
+		return {};
 	}
+	int i;
+	for (i = 0; i < camino1.size() && i < camino2.size(); i++) {
+		if (camino1[i] != camino2[i]) {
+			break;
+		}
+	}
+	return camino1[i - 1];
 }
 
 bool Ancestro::encontrarCamino(Nodo* nodo, std::vector<int>& camino, int a) {
