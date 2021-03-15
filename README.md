@@ -62,14 +62,14 @@ Haciendo un JSON de la  siguiente manera:
 **"xx" son los valores de los nodos que se requieran validar**
 
 Una vez se envíe esta petición el servidor responde otro JSON de la siguiente manera:
-´´´
+```
 {
     "Ancestro": xx
 }
-´´´
+```
 **"xx" el ancestro entre los dos nodos pedidos.** 
 
-Se debe tener en cuenta que para consultar un arbol se debe especificar en la URL /arboles...  El siguiente espacio en la URL es utilizado para ingresar el id del árbol a consultar,  
+Se debe tener en cuenta que para consultar un arbol se debe especificar en la URL /arboles...  El siguiente espacio en la URL es utilizado para ingresar el id del árbol a consultar, 
 /id... Finalmente, se debe especificar lo que se requiere para la consulta del ancestro del siguiente modo: /ancestro. Con esto se construye la URL para la petición http://localhost:8080/arboles/1/ancestro 
 
 El programa está diseñado para que el usuario escriba la URL, como se expone anteriormente, si el usuario no lo escribe de esa forma el servidor mostrara un mensaje de error. 
