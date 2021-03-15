@@ -15,6 +15,5 @@ public:
 	Ancestro(Nodo* arbol);
 	std::optional<int> encontrarAncestro(int a, int b);
 
-
 };
 

@@ -1,6 +1,7 @@
 #include "ArbolBD.h"
 #include "Nodo.h"
-#include "sqlite/sqlite3.h"
+//#include "sqlite/sqlite3.h"
+#include <sqlite3.h>
 #include <exception>
 #include <sstream>
 #include <iostream>
